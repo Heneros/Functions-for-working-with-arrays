@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>		
+		///reduce examples
+const numbers = [42332, 34243, 34245];
+
+
+
+const result = numbers.reduce((a,b) =>{
+	return a+b;
+})
+console.log(result);
+
+
+
+const total = [13234, 2323, 3243454].reduce((a,b) =>{
+ 	return a+b;
+ })
+ console.log(total);
+
+ //unfolding
+const flatted = [[1, 2, 3], [4, 5, 6], [321, 23, 43]].reduce((a, b) => {
+ return a.concat(b);
+})
+ console.log(flatted);
+
+ const food = ["cheese", "butter", "bread"];
+ const fridge = food.reduce((sum,word) => {
+ 	return sum + word.length;
+ }, 0)
+ console.log(fridge);
+
+const friends = [ 
+{ name: "Anna", books: ["Bible", "Harry Potter"], age: 21 }, 
+{ name: "Bob", books: ["War and peace", "Romeo and Juliet"], age: 26 },
+{ name: "Alice", books: ["The Lord of the Rings", "The Shining"], age: 18 }
+]
+
+const allbooks = friends.reduce((a,b) => {
+	 return [...a, ...b.books];
+}, ["Alphabet"]);
+console.log(allbooks);
+	</script>
+</body>
+</html>
