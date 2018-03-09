@@ -45,6 +45,32 @@ const allbooks = friends.reduce((a,b) => {
 	 return [...a, ...b.books];
 }, ["Alphabet"]);
 console.log(allbooks);
+
+
+//map
+const fullInfo = friends.map(friends => `${friends.name} ${friends.age}`);
+console.log(fullInfo);
+
+const names = friends.map((friend) => {return friend.length; });
+console.log(names);
+
+///filter 
+const filter = friends.filter(friend => (friend.age >= 20 && friend.age < 30));
+console.log(filter);
+
+const words = ["spray", "limit", "elite", "exuberant", "destruction", "present", "happy"];
+const maxLeng = words.filter(word => word.length > 6);
+console.log(maxLeng);
+
+
+
+//sort
+const ordered = friends.sort((a, b ) => a.age > b.age ? 1: -1);
+console.log(ordered);
+
+
+const sorted = friends.sort((a, b) => { return +(a.value > b.value) || +(a.value === b.value) - 1 });
+    console.log(sorted);
 	</script>
 </body>
 </html>
